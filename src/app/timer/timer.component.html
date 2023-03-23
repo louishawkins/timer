@@ -1,1 +1,12 @@
-<p>timer works!</p>
+<button [ngClass]="isCountingUp  ? 'counting-up' : 'initial'" (click)="onClick()">
+    <ng-container *ngIf="!isCountingUp">
+        <i class="zmdi zmdi-phone"></i>
+    </ng-container>
+    <ng-container *ngIf="isCountingUp">
+        <i class="zmdi zmdi-phone-end"></i>
+        <span>{{timeFormatted}}</span>
+    </ng-container>
+</button>
+
+
+
